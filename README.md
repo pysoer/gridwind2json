@@ -1,12 +1,23 @@
-# CMAwind2leaflet-velocity
-decode CMA-GFS wind product data to leaflet-velocity json type
+# wind2json
+decode CMA wind product data to leaflet-velocity json type
 
-## 解析CMA-GFS风场数据，生成leaflet-velocity需要的json格式数据
-## 支持CMA-GFS 地面和高空，CMA-GD、SH等模式资料。
+## 解析CMA-GFS/CMA-GD/CMA-SH地面和高空等模式资料风场数据，生成leaflet-velocity需要的json格式数据
+
 ## 需要安装`meteva`
 ```
 pip install meteva
 ```
+
+## what's leaflet-velocity
+
+`leaflet-velocity` is here : https://github.com/onaci/leaflet-velocity
+
+---
+
+A plugin for Leaflet (v1.0.3, and v0.7.7) to create a canvas visualisation layer for direction and intensity of arbitrary velocities (e.g. wind, ocean current).
+
+![Screenshot](https://github.com/onaci/leaflet-velocity/blob/master/screenshots/velocity.gif?raw=true)
+
 
 ## example:decode_from_gds
 ```python
