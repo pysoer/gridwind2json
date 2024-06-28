@@ -1,8 +1,9 @@
 import meteva.base as meb
 import numpy as np
 import json
+import datetime
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 
 header = {
@@ -11,7 +12,7 @@ header = {
     "gribEdition": 2,
     "gribLength": 77171,
     "center": 7,
-    "centerName": "CMA-GD-RUC",
+    "centerName": "CMA",
     "subcenter": 0,
     "refTime": "2016-04-06T12:00:00.000Z",
     "significanceOfRT": 1,
@@ -102,8 +103,12 @@ class Wind2Json:
             header["nx"] = int(np.round(nx, 0).astype(int))
             header["ny"] = int(np.round(ny, 0).astype(int))
             header["numberPoints"] = nx * ny
-            refTime = m1.time.values.astype(str)
-            header["refTime"] = refTime
+            m1Time = m1.time.values.astype(str)[:19]
+            dtimedelta = int(grd.dtime.values[0])
+            refTime = datetime.datetime.strptime(
+                m1Time, "%Y-%m-%dT%H:%M:%S"
+            ) + datetime.timedelta(hours=dtimedelta)
+            header["refTime"] = refTime.strftime("%Y/%m/%d %H:%M:%S")
             headerU = header.copy()
             headerU["parameterNumberName"] = "U-component_of_wind"
             headerU["parameterCategory"] = "2"
