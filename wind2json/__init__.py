@@ -5,6 +5,7 @@ import datetime
 
 __version__ = "1.0.1"
 
+all = ["Wind2Json"]
 
 header = {
     "discipline": 0,

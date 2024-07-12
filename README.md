@@ -1,11 +1,11 @@
 # gridwind2json
 decode CMA grid-wind product data to leaflet-velocity json type
 
-解析CMA-GFS/CMA-GD/CMA-SH地面和高空等模式资料风场数据，生成leaflet-velocity需要的json格式数据
+[China] 解析CMA-GFS/CMA-GD/CMA-SH地面和高空等模式资料风场数据，生成leaflet-velocity需要的json格式数据
 
-## 需要安装`meteva`
+## install
 ```
-pip install meteva
+pip install wind2json
 ```
 
 ## what's leaflet-velocity
@@ -27,7 +27,7 @@ filename = datetime.datetime.now().strftime("%y%m%d%H") + ".000"
 path = f"GUANGZHOU_RUC/WIND/850/{filename}"
 service = Wind2Json("10.1.20.100", 8080)
 service.decode_from_gds(path)
-service("wind.json")
+service("d:/wind.json")
 ```
 
 ## example:decode_from_file
@@ -36,6 +36,6 @@ from wind2json import Wind2Json
 path = f"24010123.001"
 service = Wind2Json()
 service.decode_from_file(path)
-service(f"{path}.json")
+service(f"d:/{path}.json")
 ```
 
