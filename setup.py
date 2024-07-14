@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="wind2json",
-    version="1.0.2",
+    version="1.0.3",
     description="decode CMA grid-wind product",
     long_description="decode CMA grid-wind product data to leaflet-velocity json type,see https://github.com/pysoer/gridwind2json",
     license="GPL Licence",
@@ -13,8 +13,5 @@ setup(
     platforms="Windows",
     python_requires=">=3.5",
     install_requires=["meteva"],
-    package_dir={"wind2json": "wind2json"},
-    # package_data={
-    #     "wind2json": ["data/*.*", "data/*/*.*"],
-    # },
+    package_dir={"wind2json": "wind2json"}
 )

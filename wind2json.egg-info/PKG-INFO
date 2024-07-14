@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: wind2json
-Version: 1.0.2
+Version: 1.0.3
 Summary: decode CMA grid-wind product
 Author: pysoer
 Author-email: 413188893@qq.com

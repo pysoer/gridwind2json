@@ -2,6 +2,7 @@ LICENSE
 README.md
 setup.py
 wind2json/__init__.py
+wind2json/main.py
 wind2json.egg-info/PKG-INFO
 wind2json.egg-info/SOURCES.txt
 wind2json.egg-info/dependency_links.txt
