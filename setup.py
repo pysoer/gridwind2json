@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="wind2json",
-    version="1.0.3",
+    version="1.0.4",
     description="decode CMA grid-wind product",
     long_description="decode CMA grid-wind product data to leaflet-velocity json type,see https://github.com/pysoer/gridwind2json",
     license="GPL Licence",
